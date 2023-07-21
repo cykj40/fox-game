@@ -18,6 +18,7 @@ export default function initButtons(handleUserAction) {
       selectedIcon = (1 + selectedIcon) % ICONS.length;
       toggleHighlighted(selectedIcon, true);
     } else {
+      console.log("Selected Icon:", ICONS[selectedIcon]);
       handleUserAction(ICONS[selectedIcon]);
     }
   }

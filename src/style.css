@@ -39,20 +39,17 @@ body {
   position: absolute;
   top: 62px;
   left: 67px;
-
 }
 
 .game .night {
   width: 716px;
   top: 62px;
   left: -19px;
-
 }
 
 .hidden {
   display: none;
 }
-
 
 /* buttons */
 
@@ -65,8 +62,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
- 
-  
 }
 
 .icons {
@@ -99,10 +94,7 @@ body {
   font-size: 20px;
   font-weight: bold;
   border-radius: 12px;
-  
 }
- 
-
 
 .modal:empty {
   display: none;

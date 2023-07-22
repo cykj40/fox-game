@@ -2,7 +2,6 @@
   "name": "fox-game-project",
   "version": "1.0.0",
   "description": "a digital pet game",
-  
   "homepage": "https://cykj40.github.io/fox-game/",
   "scripts": {
     "build": "parcel build src/index.html",
@@ -25,4 +24,3 @@
     "last 2 Firefox versions"
   ]
 }
-

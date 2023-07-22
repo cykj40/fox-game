@@ -56,7 +56,7 @@ jobs:
           # Set the branch where your static content will be deployed
           # Typically, for GitHub Pages, this is the 'gh-pages' branch
           # Make sure this branch exists in your repository
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
 
       # Use an output to make the page_url available to the deployment environment
       - name: Set Page URL Output

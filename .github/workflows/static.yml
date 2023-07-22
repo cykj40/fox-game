@@ -36,7 +36,7 @@ jobs:
       - name: Build with Parcel
         run: |
           cd src  # Change to the directory containing index.html
-          parcel build index.html
+          parcel build index.html --out-dir dist
         # Replace [entry_file] with the entry point of your application, such as index.html
 
       - name: Upload artifact
@@ -69,6 +69,7 @@ jobs:
     # This allows you to access the page_url in the deploy environment
     outputs:
       page_url: ${{ steps.set_output.outputs.page_url }}
+
 
 
 

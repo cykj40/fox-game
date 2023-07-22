@@ -25,7 +25,6 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,6 +45,7 @@ jobs:
           path: dist
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
           # Set the GitHub Pages directory (optional, default is '/')
@@ -54,7 +54,20 @@ jobs:
           # base_dir: '/dist'
 
           # Set the branch where your static content will be deployed
-          # Typically
+          # Typically, for GitHub Pages, this is the 'gh-pages' branch
+          # Make sure this branch exists in your repository
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Use an output to make the page_url available to the deployment environment
+      - name: Set Page URL Output
+        run: echo "::set-output name=page_url::https://$(echo $GITHUB_REPOSITORY | cut -d '/' -f 1).github.io/$(echo $GITHUB_REPOSITORY | cut -d '/' -f 2)/"
+        id: set_output
+
+    # Use the output from the deployment step to set the URL for the environment
+    # This allows you to access the page_url in the deploy environment
+    outputs:
+      page_url: ${{ steps.set_output.outputs.page_url }}
+
 
 
 

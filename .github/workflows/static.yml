@@ -39,30 +39,22 @@ jobs:
         # Replace [entry_file] with the entry point of your application, such as index.html
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           # Upload the contents of the dist directory
-          path: 'dist'
+          name: dist
+          path: dist
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          # Specify the build directory to deploy (should match the 'path' used in the 'Upload artifact' step)
-          build_dir: dist
-
-          # Set the GitHub Pages target branch where your static content will be deployed
-          target_branch: gh-pages
-
           # Set the GitHub Pages directory (optional, default is '/')
           # If your site's 'index.html' is in a subdirectory, specify that here
           # For example, if 'index.html' is in the 'dist' directory, set this to '/dist'
-          # pages_directory: '/dist'
+          # base_dir: '/dist'
 
-          # Set a custom domain if you have one (optional)
-          # custom_domain: your-custom-domain.com
+          # Set the branch where your static content will be deployed
+          # Typically
 
-          # Additional options for the deployment action (optional)
-          # See the documentation for more options: https://github.com/JamesIves/github-pages-deploy-action#usage
 
 

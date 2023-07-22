@@ -2,7 +2,7 @@
   "name": "fox-game-project",
   "version": "1.0.0",
   "description": "a digital pet game",
-  "main": "src/index.html",
+  
   "scripts": {
     "build": "parcel build src/index.html",
     "dev": "parcel src/index.html",

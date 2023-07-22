@@ -34,7 +34,7 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Build with Parcel
-        run: parcel build [entry_file]
+        run: parcel build index.html
         # Replace [entry_file] with the entry point of your application, such as index.html
 
       - name: Upload artifact

@@ -2,8 +2,8 @@
   "name": "fox-game-project",
   "version": "1.0.0",
   "description": "a digital pet game",
-  "main": "index.js",
   
+  "homepage": "https://cykj40.github.io/fox-game/",
   "scripts": {
     "build": "parcel build src/index.html",
     "dev": "parcel src/index.html",
@@ -13,8 +13,6 @@
     "lint:check": "eslint --ignore-path ./.gitignore --quiet \"./**/*.{js,ts}\"",
     "test": "jest"
   },
-  "author": "Brian Holt <btholt+foxgame@gmail.com>",
-  "license": "Apache-2.0",
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.1",
@@ -27,3 +25,4 @@
     "last 2 Firefox versions"
   ]
 }
+

@@ -2,7 +2,6 @@
   "name": "fox-game-project",
   "version": "1.0.0",
   "description": "a digital pet game",
-  "main": "src/index.js",
   "scripts": {
     "build": "parcel build src/index.html",
     "dev": "parcel src/index.html",
@@ -12,7 +11,7 @@
     "lint:check": "eslint --ignore-path ./.gitignore --quiet \"./**/*.{js,ts}\"",
     "test": "jest"
   },
- 
+
   
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -29,12 +28,12 @@
     "parcel": "^2.0.0",
     "prettier": "^2.0.4"
   },
- 
   "engines": {
     "node": ">=12.0.0"
   }
 
 }
+
 
 
 

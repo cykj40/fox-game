@@ -34,28 +34,14 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Build with Parcel
-        run: parcel build src/index.html  # Run Parcel from the root directory to bundle your code into the 'dist' folder
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          # Upload the contents of the dist directory
-          name: dist
-          path: dist
+        run: parcel build src/index.html --out-dir dist  # Bundles the code into the 'dist' folder
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
-          # Set the GitHub Pages directory (optional, default is '/')
-          # If your site's 'index.html' is in a subdirectory, specify that here
-          # For example, if 'index.html' is in the 'dist' directory, set this to '/dist'
-          base_dir: '/dist'  # Adjust this based on the actual path to your index.html
-
-          # Set the branch where your static content will be deployed
-          # Typically, for GitHub Pages, this is the 'gh-pages' branch
-          # Make sure this branch exists in your repository
           github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: ./dist  # Set the deployment directory to the 'dist' folder
 
       # Use an output to make the page_url available to the deployment environment
       - name: Set Page URL Output
@@ -66,6 +52,8 @@ jobs:
     # This allows you to access the page_url in the deploy environment
     outputs:
       page_url: ${{ steps.set_output.outputs.page_url }}
+
+
 
 
 

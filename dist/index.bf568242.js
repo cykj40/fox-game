@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"gGYi0":[function(require,module,exports) {
+})({"8d3v1":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -596,7 +596,7 @@ async function init() {
 }
 init();
 
-},{"./gameState":"WqhHm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./constants":"3huJa","./buttons":"lf35D"}],"WqhHm":[function(require,module,exports) {
+},{"./gameState":"WqhHm","./buttons":"lf35D","./constants":"3huJa","@parcel/transformer-js/src/esmodule-helpers.js":"l2SYN"}],"WqhHm":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "handleUserAction", ()=>handleUserAction);
@@ -746,7 +746,36 @@ const gameState = {
 const handleUserAction = gameState.handleUserAction.bind(gameState);
 exports.default = gameState;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./ui":"h5UjH","./constants":"3huJa"}],"gkKU3":[function(require,module,exports) {
+},{"./constants":"3huJa","./ui":"h5UjH","@parcel/transformer-js/src/esmodule-helpers.js":"l2SYN"}],"3huJa":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ICONS", ()=>ICONS);
+parcelHelpers.export(exports, "SCENES", ()=>SCENES);
+parcelHelpers.export(exports, "TICK_RATE", ()=>TICK_RATE);
+parcelHelpers.export(exports, "RAIN_CHANCE", ()=>RAIN_CHANCE);
+parcelHelpers.export(exports, "DAY_LENGTH", ()=>DAY_LENGTH);
+parcelHelpers.export(exports, "NIGHT_LENGTH", ()=>NIGHT_LENGTH);
+parcelHelpers.export(exports, "getNextHungerTime", ()=>getNextHungerTime);
+parcelHelpers.export(exports, "getNextDieTime", ()=>getNextDieTime);
+parcelHelpers.export(exports, "getNextPoopTime", ()=>getNextPoopTime);
+const ICONS = [
+    "fish",
+    "poop",
+    "weather"
+];
+const SCENES = [
+    "day",
+    "rain"
+];
+const TICK_RATE = 3000;
+const RAIN_CHANCE = 0.2;
+const DAY_LENGTH = 60;
+const NIGHT_LENGTH = 5;
+const getNextHungerTime = (clock)=>Math.floor(Math.random() * 3) + 8 + clock;
+const getNextDieTime = (clock)=>Math.floor(Math.random() * 3) + 3 + clock;
+const getNextPoopTime = (clock)=>Math.floor(Math.random() * 3) + 8 + clock;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"l2SYN"}],"l2SYN":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -796,36 +825,7 @@ const writeModal = function writeModal(text = "") {
     document.querySelector(".modal").innerHTML = `<div class="modal-inner">${text}</div>`;
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3huJa":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ICONS", ()=>ICONS);
-parcelHelpers.export(exports, "SCENES", ()=>SCENES);
-parcelHelpers.export(exports, "TICK_RATE", ()=>TICK_RATE);
-parcelHelpers.export(exports, "RAIN_CHANCE", ()=>RAIN_CHANCE);
-parcelHelpers.export(exports, "DAY_LENGTH", ()=>DAY_LENGTH);
-parcelHelpers.export(exports, "NIGHT_LENGTH", ()=>NIGHT_LENGTH);
-parcelHelpers.export(exports, "getNextHungerTime", ()=>getNextHungerTime);
-parcelHelpers.export(exports, "getNextDieTime", ()=>getNextDieTime);
-parcelHelpers.export(exports, "getNextPoopTime", ()=>getNextPoopTime);
-const ICONS = [
-    "fish",
-    "poop",
-    "weather"
-];
-const SCENES = [
-    "day",
-    "rain"
-];
-const TICK_RATE = 3000;
-const RAIN_CHANCE = 0.2;
-const DAY_LENGTH = 60;
-const NIGHT_LENGTH = 5;
-const getNextHungerTime = (clock)=>Math.floor(Math.random() * 3) + 8 + clock;
-const getNextDieTime = (clock)=>Math.floor(Math.random() * 3) + 3 + clock;
-const getNextPoopTime = (clock)=>Math.floor(Math.random() * 3) + 8 + clock;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lf35D":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"l2SYN"}],"lf35D":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>initButtons);
@@ -847,6 +847,6 @@ function initButtons(handleUserAction) {
     document.querySelector(".buttons").addEventListener("click", buttonClick);
 }
 
-},{"./constants":"3huJa","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["gGYi0","hBLPf"], "hBLPf", "parcelRequire7a45")
+},{"./constants":"3huJa","@parcel/transformer-js/src/esmodule-helpers.js":"l2SYN"}]},["8d3v1","hBLPf"], "hBLPf", "parcelRequire0fb3")
 
 //# sourceMappingURL=index.bf568242.js.map

@@ -1,7 +1,5 @@
 {
-  "extends": "@parcel/config-default",
-  "transformers": {
-    "*.customextension": ["@parcel/transformer-raw"]
-  }
+  "extends": "@parcel/config-default"
 }
+
 

@@ -1,17 +1,18 @@
 {
-  "name": "fox-game-project",
+  "name": "fox-game",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "a digital pet game",
   "homepage": "https://cykj40.github.io/fox-game/",
+=======
+  "description": "",
+  "main": "src/index.html",
+>>>>>>> parent of c5a1ebc (Update package.json)
   "scripts": {
-    "build": "parcel build src/index.html",
     "dev": "parcel src/index.html",
-    "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
-    "format:check": "prettier --ignore-path ./.gitignore --check \"./**/*.{html,json,js,ts,css}\"",
-    "lint": "eslint --ignore-path ./.gitignore --fix \"./**/*.{js,ts}\"",
-    "lint:check": "eslint --ignore-path ./.gitignore --quiet \"./**/*.{js,ts}\"",
     "test": "jest"
   },
+<<<<<<< HEAD
   "devDependencies": {
     
     "@parcel/transformer-raw": "^2.9.3",
@@ -24,5 +25,22 @@
   },
   "browserslist": [
     "last 2 chrome versions"
+=======
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "jest": "^29.6.1",
+    "prettier": "^3.0.0"
+
+  },
+  "browserslist": [
+    "last 2 Chrome version"
+>>>>>>> parent of c5a1ebc (Update package.json)
   ]
 }

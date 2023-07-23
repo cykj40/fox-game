@@ -29,24 +29,13 @@
     "parcel": "^2.0.0",
     "prettier": "^2.0.4"
   },
-  "targets": {
-    "main": {
-      "distDir": "dist",
-      "distEntry": "index.html",
-      "distFileName": "index.html",
-      "distFilepath": "dist/index.html",
-      "publicUrl": "/",
-      "srcDir": "src",
-      "srcEntry": "index.html",
-      "srcFileName": "index.html",
-      "srcFilepath": "src/index.html"
-    }
-  },
+  
   "engines": {
     "node": ">=12.0.0"
   }
 
 }
+
 
 
 

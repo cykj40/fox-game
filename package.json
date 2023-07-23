@@ -23,6 +23,6 @@
     "prettier": "^2.0.4"
   },
   "browserslist": [
-    "last 2 Firefox versions"
+    "last 2 chrome versions"
   ]
 }

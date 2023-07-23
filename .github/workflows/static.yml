@@ -34,7 +34,7 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Build with Parcel
-        run: parcel build src/index.html --dist-dir www  # Bundles the code into the 'dist' folder
+        run: parcel build src/index.html --dist-dir www # Bundles the code into the 'dist' folder
 
       - name: Deploy to GitHub Pages
         id: deployment

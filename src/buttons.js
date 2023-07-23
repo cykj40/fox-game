@@ -7,6 +7,7 @@ const toggleHighlighted = (icon, show) =>
 
 export default function initButtons(handleUserAction) {
   let selectedIcon = 0;
+
   function buttonClick({ target }) {
     if (target.classList.contains("left-btn")) {
       toggleHighlighted(selectedIcon, false);
@@ -17,6 +18,7 @@ export default function initButtons(handleUserAction) {
       selectedIcon = (1 + selectedIcon) % ICONS.length;
       toggleHighlighted(selectedIcon, true);
     } else {
+      console.log("Selected Icon:", ICONS[selectedIcon]);
       handleUserAction(ICONS[selectedIcon]);
     }
   }

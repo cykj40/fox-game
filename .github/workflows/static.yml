@@ -36,7 +36,7 @@ jobs:
       - name: Build with Parcel
         run: |
           cd src  # Change to the directory containing index.html
-          parcel build src/index.html 
+          parcel build dist\index.html
         # Replace [entry_file] with the entry point of your application, such as index.html
 
       - name: Upload artifact

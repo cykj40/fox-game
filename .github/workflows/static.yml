@@ -34,10 +34,7 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Build with Parcel
-        run: |
-          cd src  # Change to the directory containing index.html
-          parcel build dist\index.html
-        # Replace [entry_file] with the entry point of your application, such as index.html
+        run: parcel build src/index.html  # Run Parcel from the root directory to bundle your code into the 'dist' folder
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -53,7 +50,7 @@ jobs:
           # Set the GitHub Pages directory (optional, default is '/')
           # If your site's 'index.html' is in a subdirectory, specify that here
           # For example, if 'index.html' is in the 'dist' directory, set this to '/dist'
-          # base_dir: '/dist'
+          base_dir: '/dist'  # Adjust this based on the actual path to your index.html
 
           # Set the branch where your static content will be deployed
           # Typically, for GitHub Pages, this is the 'gh-pages' branch
@@ -69,6 +66,7 @@ jobs:
     # This allows you to access the page_url in the deploy environment
     outputs:
       page_url: ${{ steps.set_output.outputs.page_url }}
+
 
 
 

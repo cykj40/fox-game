@@ -20,4 +20,4 @@ jobs:
         env:
           GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
         with:
-          build_dir: code-complete-game/dist
+          build_dir: dist

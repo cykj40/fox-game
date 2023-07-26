@@ -29,8 +29,7 @@ jobs:
           target_branch: gh-pages
           keep_history: false
           allow_empty_commit: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }} # Use the GitHub Actions token
+
 
 
 

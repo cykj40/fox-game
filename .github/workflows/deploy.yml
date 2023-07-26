@@ -23,10 +23,11 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        env:
-          GH_TOKEN: ${{ secrets.MY_PAT_TOKEN }}
-        run: |
-          npx gh-pages --dist dist --dotfiles --message "Deploy via GitHub Actions"
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.MY_PAT_TOKEN }}
+          publish_dir: ./dist
+
 
 
 

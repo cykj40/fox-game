@@ -14,7 +14,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '16.14.2' 
+          node-version: '16.14.2' # Change to the latest LTS version of Node.js
 
       - name: Install Dependencies
         run: npm install
@@ -27,7 +27,8 @@ jobs:
         with:
           github_token: ${{ secrets.MY_PAT_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages  # Change to the correct branch (gh-pages) for deployment
+          publish_branch: main # Change to 'main' to deploy from the main branch
+
 
 
 

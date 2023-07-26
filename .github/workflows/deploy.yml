@@ -1,4 +1,4 @@
-name: Deploy Built Site to Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -23,11 +24,10 @@ jobs:
       - name: Build with Parcel
         run: npm run build
 
-      - name: Deploy site to gh-pages branch
-        uses: crazy-max/ghaction-github-pages@v1.4.0
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          build_dir: dist # Change this to the directory where your built output is located
-          target_branch: gh-pages
-          keep_history: false
-          allow_empty_commit: true
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
+          publish_dir: ./dist # Change this to the directory where your built output is located
+
 

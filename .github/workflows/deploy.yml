@@ -23,11 +23,11 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        run: |
-          npx gh-pages -d dist --dotfiles
         env:
-          CI: true
           GH_TOKEN: ${{ secrets.MY_PAT_TOKEN }}
+        run: |
+          npx gh-pages --dist dist --dotfiles --message "Deploy via GitHub Actions"
+
 
 
 
